@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salim's Salary</title>
+</head>
+<body>
+    <script>
+        // Prompt Salim for his monthly salary and the name of the month
+        const salary = parseFloat(prompt("Enter your monthly salary:"));
+        const month = prompt("Enter the name of the month:");
+
+            // Ask Salim for the percentages for Savings, Rent, and Electricity
+            const savingsPercentage = parseFloat(prompt("Enter the percentage of your salary for Savings:"));
+            const rentPercentage = parseFloat(prompt("Enter the percentage of your salary for Rent:"));
+            const electricityPercentage = parseFloat(prompt("Enter the percentage of your salary for Electricity:"));
+    
+            // Calculate the allocated amounts
+            const savings = (savingsPercentage / 100) * salary;
+            const rent = (rentPercentage / 100) * salary;
+            const electricity = (electricityPercentage / 100) * salary;
+    
+            // Calculate total expenses and remaining salary
+            const totalExpenses = savings + rent + electricity;
+            const remainingSalary = salary - totalExpenses;
+    
+            // Estimate yearly rent and electricity costs
+            const yearlyRent = rent * 12;
+            const yearlyElectricity = electricity * 12;
+    
+            // Salary raised to the power of 2 (just for fun)
+            const salarySquared = Math.pow(salary, 2);
+    
+            // Additional savings calculation
+            const additionalSavings = 50; // $50 extra
+            const remainderAfterExtraSavings = additionalSavings % savings;
+    
+            // Display all results in a readable format
+            console.log(`Financial Summary for ${month}:`);
+            console.log(`- Monthly Salary: $${salary.toFixed(2)}`);
+            console.log(`- Allocated to Savings: $${savings.toFixed(2)}`);
+            console.log(`- Allocated to Rent: $${rent.toFixed(2)}`);
+            console.log(`- Allocated to Electricity: $${electricity.toFixed(2)}`);
+            console.log(`- Total Expenses: $${totalExpenses.toFixed(2)}`);
+            console.log(`- Remaining Salary: $${remainingSalary.toFixed(2)}`);
+            console.log(`- Yearly Rent: $${yearlyRent.toFixed(2)}`);
+            console.log(`- Yearly Electricity: $${yearlyElectricity.toFixed(2)}`);
+            console.log(`- Salary Squared (for fun): $${salarySquared.toFixed(2)}`);
+            console.log(`- Additional Savings Remainder: $${remainderAfterExtraSavings.toFixed(2)}`);
+        
+    </script>
+    
+</body>
+</html>
